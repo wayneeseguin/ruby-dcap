@@ -1,0 +1,18 @@
+<h1>SessionTags controller, index action</h1>
+
+<p>Edit this file in <tt>app/views/session_tags/index.html.erb</tt></p>
+
+<table>
+  <tr>
+  </tr>
+
+<% for session_tag in @session_tags %>
+  <tr>
+    <td><%= link_to 'Show', url(:session_tag, session_tag) %></td>
+    <td><%= link_to 'Edit', url(:edit_session_tag,  session_tag) %></td>
+    <td><%= delete_button :session_tag, session_tag %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'New', url(:new_session_tag) %>

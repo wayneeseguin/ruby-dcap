@@ -1,0 +1,14 @@
+<h1>Sessions controller, edit action</h1>
+
+<p>Edit this file in <tt>app/views/sessions/edit.html.erb</tt></p>
+
+<%= error_messages_for :session %>
+
+<% form_for(@session, :action => url(:session, @session)) do %>
+  <p>
+    <%= submit_button "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', url(:session, @session) %> |
+<%= link_to 'Back', url(:sessions) %>

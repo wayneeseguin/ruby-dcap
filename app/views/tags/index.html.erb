@@ -1,0 +1,18 @@
+<h1>Tags controller, index action</h1>
+
+<p>Edit this file in <tt>app/views/tags/index.html.erb</tt></p>
+
+<table>
+  <tr>
+  </tr>
+
+<% for tag in @tags %>
+  <tr>
+    <td><%= link_to 'Show', url(:tag, tag) %></td>
+    <td><%= link_to 'Edit', url(:edit_tag,  tag) %></td>
+    <td><%= delete_button :tag, tag %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'New', url(:new_tag) %>

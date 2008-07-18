@@ -1,0 +1,6 @@
+{
+  "model":"Vote",
+  "data": [
+  {"entity_class": "Session", "entity_id": "1", "value": "1" }
+  ]
+}

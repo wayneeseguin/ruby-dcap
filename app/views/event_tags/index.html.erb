@@ -1,0 +1,18 @@
+<h1>EventTags controller, index action</h1>
+
+<p>Edit this file in <tt>app/views/event_tags/index.html.erb</tt></p>
+
+<table>
+  <tr>
+  </tr>
+
+<% for event_tag in @event_tags %>
+  <tr>
+    <td><%= link_to 'Show', url(:event_tag, event_tag) %></td>
+    <td><%= link_to 'Edit', url(:edit_event_tag,  event_tag) %></td>
+    <td><%= delete_button :event_tag, event_tag %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'New', url(:new_event_tag) %>

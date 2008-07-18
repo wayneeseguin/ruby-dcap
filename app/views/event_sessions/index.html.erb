@@ -1,0 +1,18 @@
+<h1>EventSessions controller, index action</h1>
+
+<p>Edit this file in <tt>app/views/event_sessions/index.html.erb</tt></p>
+
+<table>
+  <tr>
+  </tr>
+
+<% for event_session in @event_sessions %>
+  <tr>
+    <td><%= link_to 'Show', url(:event_session, event_session) %></td>
+    <td><%= link_to 'Edit', url(:edit_event_session,  event_session) %></td>
+    <td><%= delete_button :event_session, event_session %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'New', url(:new_event_session) %>

@@ -1,0 +1,14 @@
+<h1>Events controller, edit action</h1>
+
+<p>Edit this file in <tt>app/views/events/edit.html.erb</tt></p>
+
+<%= error_messages_for :event %>
+
+<% form_for(@event, :action => url(:event, @event)) do %>
+  <p>
+    <%= submit_button "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', url(:event, @event) %> |
+<%= link_to 'Back', url(:events) %>

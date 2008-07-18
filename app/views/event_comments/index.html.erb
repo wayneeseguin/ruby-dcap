@@ -1,0 +1,18 @@
+<h1>EventComments controller, index action</h1>
+
+<p>Edit this file in <tt>app/views/event_comments/index.html.erb</tt></p>
+
+<table>
+  <tr>
+  </tr>
+
+<% for event_comment in @event_comments %>
+  <tr>
+    <td><%= link_to 'Show', url(:event_comment, event_comment) %></td>
+    <td><%= link_to 'Edit', url(:edit_event_comment,  event_comment) %></td>
+    <td><%= delete_button :event_comment, event_comment %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'New', url(:new_event_comment) %>

@@ -1,0 +1,13 @@
+<h1>Attendees controller, new action</h1>
+
+<p>Edit this file in <tt>app/views/attendees/new.html.erb</tt></p>
+
+<%= error_messages_for :attendee %>
+
+<% form_for(@attendee, :action => url(:attendees) ) do |f| %>
+  <p>
+    <%= submit_button "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', url(:attendees) %>

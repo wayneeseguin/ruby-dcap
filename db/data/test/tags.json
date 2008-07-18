@@ -1,0 +1,6 @@
+{
+  "model":"Event",
+  "data": [
+    {"name": "Ruby DCamp", "description": "Awesome conference dudes!"}
+  ]
+}

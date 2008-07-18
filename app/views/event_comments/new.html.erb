@@ -1,0 +1,13 @@
+<h1>EventComments controller, new action</h1>
+
+<p>Edit this file in <tt>app/views/event_comments/new.html.erb</tt></p>
+
+<%= error_messages_for :event_comment %>
+
+<% form_for(@event_comment, :action => url(:event_comments) ) do |f| %>
+  <p>
+    <%= submit_button "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', url(:event_comments) %>

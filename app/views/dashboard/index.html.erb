@@ -1,0 +1,6 @@
+<h2>Events</h2>
+<% @events.each do |event| %>
+<div>
+  <%= link_to event.name, url(:event,  event) %>
+</div>
+<% end %>
