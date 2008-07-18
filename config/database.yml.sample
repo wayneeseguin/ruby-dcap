@@ -1,0 +1,20 @@
+---
+development: &defaults
+  adapter:  postgresql
+  database: ruby_dcap_development
+  repositories:
+    default:
+      adapter:  postgresql
+      database: ruby_dcap_development
+
+test:
+  <<:       *defaults
+  repositories:
+    default:
+      adapter:  postgresql
+      database: ruby_dcap_test
+
+production:
+  <<:       *defaults
+  default:
+    database: ruby_dcap_production
