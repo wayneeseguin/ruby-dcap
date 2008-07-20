@@ -21,8 +21,9 @@
 
 Merb.logger.info("Compiling routes...")
 Merb::Router.prepare do |router|
-  router.resources :events do |event|
-    event.resources :sessions
-  end
+  router.resources :events #do |event|
+#    event.resources :sessions
+#  end
+  router.resources :sessions
   router.match('/').to(:controller => "dashboard", :action => "index")
 end

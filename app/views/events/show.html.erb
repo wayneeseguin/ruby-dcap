@@ -5,7 +5,7 @@
 <h2><%= @event.name %></h2>
 <div><%= @event.description %></div>
 <% @event.sessions.each do |session| %>
-<h3><%= link_to session.name, url(:sessions, session) %></h3>
+<h3><%= link_to session.name, url(:session, session) %></h3>
 <% end %>
 
 <%= link_to "Edit", url(:edit_event, @event) %> |
