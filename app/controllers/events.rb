@@ -1,6 +1,8 @@
 class Events < Application
   # provides :xml, :yaml, :js
 
+  provides :json
+
   def index
     @events = Event.all
     display @events

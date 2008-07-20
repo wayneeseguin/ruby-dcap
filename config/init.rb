@@ -1,7 +1,7 @@
 Gem.clear_paths
 Gem.path.unshift(Merb.root / "gems")
 
-dependencies "dm-types", "dm-validations", "dm-polymorphic"
+dependencies "dm-types", "dm-validations", "dm-polymorphic", "dm-serializer"
 dependencies "merb-assets", "merb_helpers", "merb-slices", "merb-action-args"
 
 Merb::BootLoader.after_app_loads do
