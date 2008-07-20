@@ -3,7 +3,7 @@ class Vote
 
   property :id, Integer, :serial => true
   property :value, Integer
-  
-  is :polymorphic, :entity
-  
+
+  belongs_to :attendee
+  belongs_to :session
 end

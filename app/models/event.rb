@@ -7,6 +7,5 @@ class Event
   
   has n, :sessions
   has n, :attendees
-  has n, :comments
-  
+  has n, :comments, :via => :commentable
 end

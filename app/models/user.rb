@@ -7,4 +7,6 @@ class User
   property :email, String, :size => 255
 
   has n, :comments
+  has n, :attendees
+  has n, :events, :through => :attendees
 end

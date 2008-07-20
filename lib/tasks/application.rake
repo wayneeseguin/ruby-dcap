@@ -14,8 +14,11 @@ def json_to_db(json)
   model = Kernel.const_get(json["model"])
 
   json["data"].each do |data|
+    # puts "???? #{data.inspect}"
     data["user"] = User.get(data["user"]) if data["user"]
-    model.create(data)
+    # puts "&&& #{data['user'].inspect}"
+    res = model.create(data)
+    # puts ">>> #{res.inspect}"
   end
 end
 
@@ -37,10 +40,19 @@ namespace :app do
 
     desc "Load test data"
     task :load_test_data do
+      $LOAD_PATH << File.join(File.dirname(__FILE__), "..", "..", "app", "models")
+      Dir["app/models/*.rb"].each do |file|
+        require file
+      end
       Dir["db/data/test/*"].each do |file|
-        Merb.logger.info "Reading #{file}"
-        json = JSON.parse(File.read(file))
-        json_to_db(json)
+        next if file =~ /\.json$/
+        require file
+        # Merb.logger.info "Reading #{file}"
+        # json = JSON.parse(File.read(file))
+        # TODO: Iterate through JSON loading objects without relationships
+        # TODO: Iterate through JSON loading relationships for each object
+          # TODO: Look at the associated Resource's properties to determine the primary key field(s)
+        # json_to_db(json)
       end
     end
 

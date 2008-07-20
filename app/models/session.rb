@@ -6,7 +6,8 @@ class Session
   property :description, DataMapper::Types::Text
 
   has n, :votes
-  has n, :tags
-  has n, :comments
+  has n, :tags, :via => :taggable
+  has n, :comments, :via => :commentable
   
+  belongs_to :event
 end

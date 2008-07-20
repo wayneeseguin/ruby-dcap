@@ -1,8 +1,14 @@
+require 'tag'
+
 class Attendee
   include DataMapper::Resource
   
+  property :id, Integer, :serial => :true
+  
   # link between a user and an event.
-  has 1, :user
-  has 1, :event
+  belongs_to :user
+  belongs_to :event
+
   has n, :votes
+  has n, :tags, :via => :taggable
 end
