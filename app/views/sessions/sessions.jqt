@@ -1,0 +1,15 @@
+<script type="text/x-jquery-template" title="sessions">
+  <h2>Sessions</h2>
+  <div class="sessions">
+  <% $.each(_context, function(index, session){ %>
+    <%= partial("session", session) %>
+  <% }); %>
+  </div>
+</script>
+
+<script type="text/x-jquery-template" title="session">
+  <div session_id="<%= id %>" class="session">
+    <h3><%= name %></h3>
+    <p><%= description %></p>
+  </div>
+</script>

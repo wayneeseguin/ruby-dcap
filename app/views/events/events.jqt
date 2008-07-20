@@ -8,4 +8,6 @@
 <script type="text/x-jquery-template" title="event">
   <h1>Event <%= name %></h1>
   <p><%= description %></p>
+  
+  <%= partial("sessions", sessions) %>
 </script>
