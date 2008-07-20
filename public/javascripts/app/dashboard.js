@@ -8,12 +8,12 @@ function display_events() {
   $.getJSON("/events", null, function(events) {
     $("#events").empty();
     $("#events").append($.pageTemplates["events"](events));
-    $("div.events").click(function() { display_event(); });
+    $("#events div.event").click(function() { display_event($(this).attr("event_id")); });
   });
 }
 
 function display_event (event_id) {
-  $.getJSON("/event" + event_id, null, function(event) {
+  $.getJSON("/events/" + event_id, null, function(event) {
     $("body").append(
       $("<div/>").attr("id","event-" + event.id).append(
         $.pageTemplates["event"](event)

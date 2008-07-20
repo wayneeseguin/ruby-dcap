@@ -2,9 +2,11 @@ class Events < Application
   # provides :xml, :yaml, :js
 
   provides :json
-
+  does_not_provide :html
+  
   def index
     @events = Event.all
+    Merb.logger.info @events.to_json
     display @events
   end
 

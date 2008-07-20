@@ -7,17 +7,16 @@ Merb::BootLoader.after_app_loads do
   # dependency "magic_admin" # this gem uses the app's model classes
 end
 
-dependencies "dm-types", "dm-validations", "dm-polymorphic", "dm-serializer"
+dependencies "dm-types", "dm-validations", "dm-polymorphic", "dm-serializer", "json"
 dependencies "merb-assets", "merb_helpers", "merb-slices", "merb-action-args"
 
 use_orm :datamapper
 use_test :rspec
 
 Merb::Config.use do |c|
-
   # Sets up a custom session id key which is used for the session persistence
   # cookie name.  If not specified, defaults to '_session_id'.
-  # c[:session_id_key] = '_session_id'
+  c[:session_id_key] = "ruby-dcap-session"
   
   # The session_secret_key is only required for the cookie session store.
   c[:session_secret_key]  = '9c58625dfa6b8c53f7d3bbd7a76169cf69fe8afd'
