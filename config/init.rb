@@ -1,14 +1,14 @@
 Gem.clear_paths
 Gem.path.unshift(Merb.root / "gems")
 
-dependencies "dm-types", "dm-validations", "dm-polymorphic", "dm-serializer"
-dependencies "merb-assets", "merb_helpers", "merb-slices", "merb-action-args"
-
 Merb::BootLoader.after_app_loads do
   # Add dependencies here that must load after the application loads:
 
   # dependency "magic_admin" # this gem uses the app's model classes
 end
+
+dependencies "dm-types", "dm-validations", "dm-polymorphic", "dm-serializer"
+dependencies "merb-assets", "merb_helpers", "merb-slices", "merb-action-args"
 
 use_orm :datamapper
 use_test :rspec

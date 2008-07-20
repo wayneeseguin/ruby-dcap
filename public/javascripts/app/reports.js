@@ -1,0 +1,1 @@
+// Reports area / replaces the dashboard work areas.

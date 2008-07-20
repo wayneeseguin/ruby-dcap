@@ -1,0 +1,14 @@
+<script type="text/x-jquery-template" title="events">
+<h1>Events</h1>
+<% $.each(events, function(index, event){ %>
+  <div class="event" id="<%= event.id %>"><%= event.name %> : <%= event.description %></div>
+<% }); %>
+
+</script>
+
+<script type="text/x-jquery-template" title="event">
+<h1>Event <%= name %></h1>
+
+<p><%= description %></p>
+
+</script>
