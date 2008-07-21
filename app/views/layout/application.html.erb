@@ -1,13 +1,63 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
   <head>
-    <title>Fresh Merb App</title>
+    <title>Ruby DCa(m)p</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <%= javascripts_for(:jquery) %>
     <%= javascripts_for(:app) %>
     <link rel="stylesheet" href="/stylesheets/master.css" type="text/css" media="screen" charset="utf-8" />
   </head>
   <body>
+    <div id="header">
+
+    	<div id="header_inner" class="fluid">
+        <span class="logout">[logout]</span>
+    		<div id="logo">
+    			<h1><span>OC</span></h1>
+    			<h2>Opinionated Conferences</h2>
+    		</div>
+
+    		<div id="menu">
+    			<ul>
+    				<li><a href="#" class="active">Events</a></li>
+    				<li><a href="#">People</a></li>
+    				<li><a href="#">Resources</a></li>
+    				<li><a href="#">Contact</a></li>
+    			</ul>
+    		</div>
+
+    	</div>
+    </div>
+
+    <div id="main">
+
+    	<div id="main_inner" class="fluid">
+
+    		<div id="primary_content">
+
+    			<div id="left_column">
+            
+    			</div>
+
+    		</div>
+
+    		<div id="secondary_content">
+
+    			<div id="right_column">
+            
+    			</div>
+
+    		</div>
+
+    		<br class="clear" />
+
+    	</div>
+
+    </div>
+
+    <div id="footer" class="fluid">
+    	Copyright &copy; 2008-<%= Time.now.year %> OC <a href="http://www.rubydcamp.com/">snark</a>.
+    </div>
     <%= templates_for(:events,:sessions,:comments) %>
   </body>
 </html>

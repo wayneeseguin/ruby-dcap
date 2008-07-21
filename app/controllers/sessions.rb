@@ -1,5 +1,6 @@
 class Sessions < Application
-  # provides :xml, :yaml, :js
+  provides :json
+  does_not_provide :html
 
   def index
     @sessions = Session.all

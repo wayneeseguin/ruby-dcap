@@ -1,13 +1,18 @@
 <script type="text/x-jquery-template" title="events">
-  <h1>Events</h1>
+  <h4>Events</h4>
+  <ul class="links events">
   <% $.each(_context, function(index, event){ %>
-    <div class="event" event_id="<%= event.id %>"><%= event.name %></div>
+    <li class="event" event_id="<%= event.id %>">
+      <a href="#event-<%= event.name %>"> <%= event.name %> </a>
+    </li>
   <% }); %>
+  </ul>
 </script>
 
 <script type="text/x-jquery-template" title="event">
-  <h1>Event <%= name %></h1>
-  <p><%= description %></p>
-  
-  <%= partial("sessions", sessions) %>
+  <div class="post">
+    <h3>Event <%= name %></h3>
+    <p><%= description %></p>
+  </div>
+  <%= partial("sessions", sessions) %>  
 </script>
