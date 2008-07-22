@@ -2,7 +2,7 @@ class Dashboard < Application
   
   def index
     @events = Event.all
-    render
+    render ""
   end
   
 end

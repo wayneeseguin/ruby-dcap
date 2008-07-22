@@ -1,0 +1,15 @@
+<script type="text/x-jquery-template" title="session_comments">
+  <h2>Comments</h2>
+  <div class="comments">
+  <% $.each(_context, function(index, comment){ %>
+    <%= partial("comment", comment) %>
+  <% }); %>
+  </div>
+</script>
+
+<script type="text/x-jquery-template" title="session_coment">
+  <div class="comment">
+    <h4><%= subject %></h4>
+    <p><%= message %></p>
+  </div>
+</script>
