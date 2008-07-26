@@ -14,5 +14,4 @@
     <h3>Event <%= name %></h3>
     <p><%= description %></p>
   </div>
-  <%= partial("sessions", sessions) %>  
 </script>

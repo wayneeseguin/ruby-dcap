@@ -24,6 +24,8 @@ Merb::Router.prepare do |router|
   router.resources :events do |event|
     event.resources :sessions
   end
-  router.resources :sessions
+  router.resources :sessions do |session|
+    session.resources :comments
+  end
   router.match('/').to(:controller => "dashboard", :action => "index")
 end

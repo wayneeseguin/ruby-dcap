@@ -33,9 +33,9 @@ function display_sessions_for_event(event_id) {
         $.pageTemplates["event_sessions"](sessions)
       )
     );
-    $("div.session h3").click(function() { 
+    $("div.session h3").click( function() { 
       display_session($(this).attr("session_id"));
-    });    
+    });
   });
 }
 
@@ -47,7 +47,7 @@ function display_session(session_id) {
       )
     );
     $.getJSON("/sessions/" + session_id + "/comments", null, function(comments) { 
-      $("div#comments").append(
+      $("div.comments").append(
         $.pageTemplates["session_comments"](comments)
       )
     });

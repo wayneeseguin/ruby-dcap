@@ -2,12 +2,12 @@
   <h2>Comments</h2>
   <div class="comments">
   <% $.each(_context, function(index, comment){ %>
-    <%= partial("comment", comment) %>
+    <%= partial("session_comment", comment) %>
   <% }); %>
   </div>
 </script>
 
-<script type="text/x-jquery-template" title="session_coment">
+<script type="text/x-jquery-template" title="session_comment">
   <div class="comment">
     <h4><%= subject %></h4>
     <p><%= message %></p>

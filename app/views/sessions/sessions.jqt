@@ -15,7 +15,7 @@
 </script>
 
 <script type="text/x-jquery-template" title="session">
-  <%= partial("event_session", id) %>
+  <%= partial("event_session", _context) %>
   <div class="comments">
   </div>
 </script>
